@@ -28,12 +28,16 @@ void display(dice_t *d) {
   printf("\n");
 }
 
+// parallelizable
 void throw_dice(dice_t *d) {
   zap(d);
+  unsigned long throw_dice_start = GetCC();
   for(int i=0;i<d->num_dice;++i) {
     long int dice = rand() % 6;
     d->face[dice]++;
   }
+  unsigned long throw_dice_finish = GetCC();
+  printf("Execution time of parallelizable throw_dice function: %lld\n", throw_dice_start- throw_dice_finish);
 }
 
 int straightsix(dice_t *d) {
