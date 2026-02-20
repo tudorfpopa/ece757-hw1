@@ -9,6 +9,7 @@
 
 // Globals
 int games;
+unsigned long parallel_time;
 
 typedef struct{
   char num_dice;
@@ -31,13 +32,13 @@ void display(dice_t *d) {
 // parallelizable
 void throw_dice(dice_t *d) {
   zap(d);
-  unsigned long throw_dice_start = GetCC();
+  //unsigned long throw_dice_start = GetCC();
   for(int i=0;i<d->num_dice;++i) {
     long int dice = rand() % 6;
     d->face[dice]++;
   }
-  unsigned long throw_dice_finish = GetCC();
-  printf("Execution time of parallelizable throw_dice function: %lld\n", throw_dice_finish-throw_dice_start);
+  //unsigned long throw_dice_finish = GetCC();
+  //printf("Execution time of parallelizable throw_dice function: %lld\n", throw_dice_finish-throw_dice_start);
 }
 
 int straightsix(dice_t *d) {
@@ -184,6 +185,7 @@ int play_turn(int cutoff, long long* inplay_throws, long long* inplay_points, lo
 }
 
 int play_game(int cutoff, long long* inplay_throws, long long* inplay_points, long long* inplay_duds) {
+  unsigned long start = GetCC();
   int score = 0;
   int turns = 0;
 
@@ -206,6 +208,9 @@ int play_game(int cutoff, long long* inplay_throws, long long* inplay_points, lo
 #if VERBOSE
   printf("Ending game with cutoff %d after %d turns\n",cutoff,turns);
 #endif
+  // measure execution time of function and add to total
+  unsigned long finish = GetCC();
+  parallel_time += (finish-start);
   return turns;
 }
 
@@ -219,7 +224,7 @@ int main( int argc, char** argv) {
   int mincutoff = atoi(argv[2]);
   int maxcutoff = atoi(argv[3]);
   printf("Playing %d games for each cutoff ranging from %d-%d\n",games, mincutoff, maxcutoff);
- 
+  parallel_time = 0;
   unsigned long start = GetCC();
 
   long long total_inplay_throws[7];
@@ -270,7 +275,7 @@ int main( int argc, char** argv) {
   unsigned long finish = GetCC();
   
   printf("Execution time in cycles: %lld\n", finish-start);
-
+  printf("Execution time of parallelizable section in cycles: %lld\n", parallel_time);
   // Display results
   printf("\nPlayed %d games per cutoff leading to the folling statistics:\n", games);
   printf("\tBest Cutoff(%d) resulted in %.2f turns on average\n", min_cutoff, (double)min_turns/(double)games);
