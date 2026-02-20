@@ -37,7 +37,7 @@ void throw_dice(dice_t *d) {
     d->face[dice]++;
   }
   unsigned long throw_dice_finish = GetCC();
-  printf("Execution time of parallelizable throw_dice function: %lld\n", throw_dice_start- throw_dice_finish);
+  printf("Execution time of parallelizable throw_dice function: %lld\n", throw_dice_finish-throw_dice_start);
 }
 
 int straightsix(dice_t *d) {
