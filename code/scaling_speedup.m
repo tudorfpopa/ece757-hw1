@@ -1,9 +1,9 @@
 N = [1 2 4 8 16];
 content = fileread('../outputs/output.txt');
 total_time = regexp(content, 'Execution time in cycles: (\d+)', 'tokens');
-total_time = str2double(total_time{1}{1});
+total_time = str2double(total_time{1}{1})
 parallel_time = regexp(content, 'Execution time of parallelizable section in cycles: (\d+)', 'tokens');
-parallel_time = str2double(parallel_time{1}{1});
+parallel_time = str2double(parallel_time{1}{1})
 p = parallel_time / total_time;
 s = 1 - p;
 speedup = 1./(s+(p./N));
