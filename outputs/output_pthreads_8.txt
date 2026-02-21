@@ -1,1 +1,1 @@
-Threads: 8, Average execution time: 110409028 cycles
+Threads: 8, Average execution time: 76376523 cycles
