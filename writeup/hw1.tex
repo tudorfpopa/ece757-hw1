@@ -13,22 +13,23 @@
 \section{Profiling and analysis}
 To estimate the potential gains of parallelizing \verb|kymppitonni.c|, we used the \verb|getCC()| function to measure the execution time of each game as well as the total execution time of a run with the following parameters:
 \begin{itemize}
-  \item Games per cutoff: 50
+  \item Games per cutoff: 5000
   \item Minimum cutoff: 10
   \item Maximum cutoff: 300
 \end{itemize}
 This yielded the given measurements:
 \begin{itemize}
-  \item $t_{total} = 4400319 $ (cycles)
-  \item $t_{parallelizable} = 4360000 $ (cycles)
+  \item $t_{total} = 273550982$ (cycles)
+  \item $t_{parallelizable} = 271080903$ (cycles)
 \end{itemize}
-Using Amdahl's law, we can then estimate theoretical speedups for 1, 2, 4, 8, and 16 processors. The results are detailed in the graph below.
+Using Amdahl's law, we can then estimate theoretical speedups for 1, 2, 4, 8, and 16 processors. The results were calculated using Matlab and are detailed in the graph below.
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{../outputs/speedup_plot.pdf}
+    \includegraphics[width=0.45\textwidth]{../outputs/speedup_plot.pdf}
     \caption{Theoretical Amdahl's Law Speedup}
     \label{fig:speedup}
 \end{figure}
-
-\section{Running phtreads implementation on gem5 in SE mode}
+\section{Running a phtreads parallelized implementation of the game}
+The serial version of \verb|kymppitonni.c| was parallelized using pthreads. More specifically, for each cutoff, we ran games in parallel instead of serially. The code was modified to pass the desired number of threads to run as argument.\\
+We successively ran it for 2, 3, and 4 threads with the same number of parameters as before; repeating it 10 times to average the execution times.
 \end{document}

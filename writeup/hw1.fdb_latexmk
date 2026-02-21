@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1771631277.26717 "hw1.tex" "hw1.pdf" "hw1" 1771631277.83072 0
-  "../outputs/speedup_plot.pdf" 1771630992.15388 12390 fe32e3a4e8350651f4415c49799fa1a9 ""
+["pdflatex"] 1771638758.26841 "hw1.tex" "hw1.pdf" "hw1" 1771638758.76231 0
+  "../outputs/speedup_plot.pdf" 1771638110.99155 2376 ef48c8620c8392513402c6543b426434 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -52,8 +52,8 @@
   "/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1759610942 5467155 19efa205003f9ecad95fbbaa6ff24da1 ""
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1759610877 3345725 f23c86e03543cf7f6e9853965adec23f ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "hw1.aux" 1771631277.75872 460 0f9206fa0fd59e70e13d5a7961d52712 "pdflatex"
-  "hw1.tex" 1771631275.45183 1184 6a6969a034e07cbcd3cff85d5f7080fe ""
+  "hw1.aux" 1771638758.70094 468 0c9b803435f48147d86acd16cbcd63b0 "pdflatex"
+  "hw1.tex" 1771638757.44209 1616 04a8faf3cb0374b786eb76205d5ada66 ""
   (generated)
   "hw1.aux"
   "hw1.log"
