@@ -1,24 +1,27 @@
+#!/bin/bash
+
 # clean and compile
-rm -rf ./kymppitonni;
-gcc -o kymppitonni kymppitonni-pthreads.c -lpthread;
-# run on 2 threads
-touch ./output_pthreads_2.txt;
-./kymppitonni 50 10 300 2 >> ./output_pthreads_2.txt;
-cat output_pthreads_2.txt;
-# run on three threads
-touch ./output_pthreads_3.txt;
-./kymppitonni 50 10 300 3 >> ./output_pthreads_3.txt;
-cat output_pthreads_3.txt;
-# run on 4 threads
-touch ./output_pthreads_4.txt;
-./kymppitonni 50 10 300 4 >> ./output_pthreads_4.txt;
-cat output_pthreads_4.txt;
-# clean executable and prev outputs
-rm -rf ./kymppitonni;
-rm -rf ../outputs/output_pthreads_2.txt;
-rm -rf ../outputs/output_pthreads_3.txt;
-rm -rf ../outputs/output_pthreads_4.txt;
-# move outputs to their folder
-mv ./output_pthreads_2.txt ../outputs/output_pthreads_2.txt;
-mv ./output_pthreads_3.txt ../outputs/output_pthreads_3.txt;
-mv ./output_pthreads_4.txt ../outputs/output_pthreads_4.txt;
+rm -rf ./kymppitonni
+gcc -o kymppitonni kymppitonni-pthreads.c -lpthread
+
+RUNS=10
+
+for THREADS in 2 3 4; do
+    OUTPUT=./output_pthreads_${THREADS}.txt
+    touch $OUTPUT
+    TOTAL=0
+    for i in $(seq 1 $RUNS); do
+        RESULT=$(./kymppitonni 5000 10 300 $THREADS | grep "Execution time in cycles")
+        CYCLES=$(echo $RESULT | grep -oP '\d+')
+        TOTAL=$((TOTAL + CYCLES))
+    done
+    AVG=$((TOTAL / RUNS))
+    echo "Threads: $THREADS, Average execution time: $AVG cycles" | tee $OUTPUT
+done
+
+# clean and move outputs
+rm -rf ./kymppitonni
+for THREADS in 2 3 4; do
+    rm -rf ../outputs/output_pthreads_${THREADS}.txt
+    mv ./output_pthreads_${THREADS}.txt ../outputs/output_pthreads_${THREADS}.txt
+done
