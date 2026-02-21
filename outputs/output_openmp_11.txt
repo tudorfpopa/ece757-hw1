@@ -1,0 +1,1 @@
+Threads: 11, Average execution time: 35296453 cycles

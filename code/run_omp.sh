@@ -2,12 +2,12 @@
 
 # clean and compile
 rm -rf ./kymppitonni
-gcc -o kymppitonni kymppitonni-pthreads.c -fopenmp
+gcc -o kymppitonni kymppitonni-openmp.c -fopenmp
 
 RUNS=10
 
 for THREADS in 2 3 4 5 6 7 8 9 10 11 12; do
-    OUTPUT=./output_pthreads_${THREADS}.txt
+    OUTPUT=./output_openmp_${THREADS}.txt
     touch $OUTPUT
     TOTAL=0
     for i in $(seq 1 $RUNS); do
@@ -22,6 +22,6 @@ done
 # clean and move outputs
 rm -rf ./kymppitonni
 for THREADS in 2 3 4 5 6 7 8 9 10 11 12; do
-    rm -rf ../outputs/output_pthreads_${THREADS}.txt
-    mv ./output_pthreads_${THREADS}.txt ../outputs/output_pthreads_${THREADS}.txt
+    rm -rf ../outputs/output_openmp_${THREADS}.txt
+    mv ./output_openmp_${THREADS}.txt ../outputs/output_openmp_${THREADS}.txt
 done
