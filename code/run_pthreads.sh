@@ -6,7 +6,7 @@ gcc -o kymppitonni kymppitonni-pthreads.c -lpthread
 
 RUNS=10
 
-for THREADS in 2 3 4; do
+for THREADS in 2 3 4 5 6 7 8 9 10 11 12; do
     OUTPUT=./output_pthreads_${THREADS}.txt
     touch $OUTPUT
     TOTAL=0
@@ -21,7 +21,7 @@ done
 
 # clean and move outputs
 rm -rf ./kymppitonni
-for THREADS in 2 3 4; do
+for THREADS in 2 3 4 5 6 7 8 9 10 11 12; do
     rm -rf ../outputs/output_pthreads_${THREADS}.txt
     mv ./output_pthreads_${THREADS}.txt ../outputs/output_pthreads_${THREADS}.txt
 done
