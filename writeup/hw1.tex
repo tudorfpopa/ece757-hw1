@@ -31,5 +31,12 @@ Using Amdahl's law, we can then estimate theoretical speedups for 1, 2, 4, 8, an
 \end{figure}
 \section{Running a phtreads parallelized implementation of the game}
 The serial version of \verb|kymppitonni.c| was parallelized using pthreads. More specifically, for each cutoff, we ran games in parallel instead of serially. The code was modified to pass the desired number of threads to run as argument.\\
-We successively ran it for 2, 3, and 4 threads with the same number of parameters as before; repeating it 10 times to average the execution times.
+We successively ran it for 2-to-12 threads in increments of 1 with the same number of parameters as before; repeating it 10 times to average the execution times. The results are detailed in the graph below.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.45\textwidth]{../outputs/pthreads_plot.pdf}
+    \caption{Speedup per number of threads (2-12)}
+    \label{fig:pthreads}
+\end{figure}
+The benchmark was run on a machine with 6 cores and 12 threads. We can observe near linear speedups up to 6 threads, as well as a dip in speedups from 7 to 10 threads. These results appear nominal, given that our test machine only possessed 6 physical threads.
 \end{document}

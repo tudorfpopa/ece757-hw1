@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.10.4)  20 FEB 2026 19:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.10.4)  20 FEB 2026 20:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -210,29 +210,36 @@ File: ../outputs/speedup_plot.pdf Graphic file (type pdf)
 <use ../outputs/speedup_plot.pdf>
 Package pdftex.def Info: ../outputs/speedup_plot.pdf  used on input line 28.
 (pdftex.def)             Requested size: 250.41425pt x 208.6789pt.
+<../outputs/pthreads_plot.pdf, id=2, 433.62pt x 361.35pt>
+File: ../outputs/pthreads_plot.pdf Graphic file (type pdf)
+<use ../outputs/pthreads_plot.pdf>
+Package pdftex.def Info: ../outputs/pthreads_plot.pdf  used on input line 37.
+(pdftex.def)             Requested size: 250.41425pt x 208.6789pt.
 
 
 [1
 
-{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <../outputs/speedup_plot.pdf>] (./hw1.aux)
+{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <../outputs/speedup_plot.pdf>]
+
+[2 <../outputs/pthreads_plot.pdf>] (./hw1.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 2655 strings out of 473190
- 40252 string characters out of 5715800
- 442463 words of memory out of 5000000
- 25911 multiletter control sequences out of 15000+600000
+ 2663 strings out of 473190
+ 40534 string characters out of 5715800
+ 442485 words of memory out of 5000000
+ 25919 multiletter control sequences out of 15000+600000
  564108 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,7n,65p,277b,235s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,7n,65p,321b,235s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on hw1.pdf (1 page, 93170 bytes).
+Output written on hw1.pdf (2 pages, 95973 bytes).
 PDF statistics:
- 53 PDF objects out of 1000 (max. 8388607)
- 32 compressed objects within 1 object stream
+ 60 PDF objects out of 1000 (max. 8388607)
+ 37 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

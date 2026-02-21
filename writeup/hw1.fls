@@ -81,6 +81,11 @@ INPUT ../outputs/speedup_plot.pdf
 INPUT ../outputs/speedup_plot.pdf
 OUTPUT hw1.pdf
 INPUT ../outputs/speedup_plot.pdf
+INPUT ../outputs/pthreads_plot.pdf
+INPUT ../outputs/pthreads_plot.pdf
+INPUT ../outputs/pthreads_plot.pdf
+INPUT ../outputs/pthreads_plot.pdf
+INPUT ../outputs/pthreads_plot.pdf
 INPUT /usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 INPUT hw1.aux
