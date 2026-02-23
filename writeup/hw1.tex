@@ -39,4 +39,13 @@ We successively ran it for 2-to-12 threads in increments of 1 with the same numb
     \label{fig:pthreads}
 \end{figure}
 The benchmark was run on a machine with 6 cores and 12 threads. We can observe near linear speedups up to 6 threads, as well as a dip in speedups from 7 to 10 threads. These results appear nominal, given that our test machine only possessed 6 physical threads.
+\section{Running an OpenMP parallelized implementation of the game}
+We repeated the same procedure, but using OpenMP to parallelize our program. The results are detailed on the graph below.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.45\textwidth]{../outputs/omp_plot.pdf}
+    \caption{Speedup per number of threads (2-12)}
+    \label{fig:omp}
+\end{figure}
+We can observe similar results to the pthreads implementation, where linear scaling occurs up to 5 threads.
 \end{document}
