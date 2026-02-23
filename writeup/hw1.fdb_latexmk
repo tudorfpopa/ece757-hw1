@@ -1,6 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1771645478.723 "hw1.tex" "hw1.pdf" "hw1" 1771645479.2485 0
-  "../outputs/omp_plot.pdf" 1771645019.93615 2736 f0ee40a9263756df3a551ac7ae2006d8 ""
+["pdflatex"] 1771640868.73246 "hw1.tex" "hw1.pdf" "hw1" 1771640869.23661 0
   "../outputs/pthreads_plot.pdf" 1771640534.97629 2729 3bfe26519fa6e4c98f97af3d3486c09f ""
   "../outputs/speedup_plot.pdf" 1771638110.99155 2376 ef48c8620c8392513402c6543b426434 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
@@ -54,8 +53,8 @@
   "/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1759610942 5467155 19efa205003f9ecad95fbbaa6ff24da1 ""
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1759610877 3345725 f23c86e03543cf7f6e9853965adec23f ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "hw1.aux" 1771645479.17618 978 863a7d661bd9b9d2c236b502f7db6adf "pdflatex"
-  "hw1.tex" 1771645476.98174 2615 b96f68c705cde9dfff0cd9315687314f ""
+  "hw1.aux" 1771640869.17444 653 9ab5fa7493f02d0f8425030188298d59 "pdflatex"
+  "hw1.tex" 1771640867.69375 2132 8b6fee0bf91b445d5d45dca62347f91a ""
   (generated)
   "hw1.aux"
   "hw1.log"
