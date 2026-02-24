@@ -1,18 +1,18 @@
-Playing 5000 games for each cutoff ranging from 10-300
-Execution time in cycles: 273550982
-Execution time of parallelizable section in cycles: 271080903
+Playing 100000 games for each cutoff ranging from 10-300
+Execution time in cycles: 4830878449
+Execution time of parallelizable section in cycles: 4788712063
 
-Played 5000 games per cutoff leading to the folling statistics:
-	Best Cutoff(210) resulted in 23.75 turns on average
-	Worst Cutoff(10) resulted in 36.11 turns on average
-	Average points accumualted with 1 dice in play: 31.03
-	Average points accumualted with 2 dice in play: 75.08
-	Average points accumualted with 3 dice in play: 102.37
-	Average points accumualted with 4 dice in play: 115.13
-	Average points accumualted with 5 dice in play: 182.03
-	Average points accumualted with 6 dice in play: 287.17
-	Probability of throwing a dud with 1 dice in play: 0.57
-	Probability of throwing a dud with 2 dice in play: 0.39
+Played 100000 games per cutoff leading to the folling statistics:
+	Best Cutoff(210) resulted in 23.76 turns on average
+	Worst Cutoff(10) resulted in 36.00 turns on average
+	Average points accumualted with 1 dice in play: 26.37
+	Average points accumualted with 2 dice in play: 75.15
+	Average points accumualted with 3 dice in play: 101.48
+	Average points accumualted with 4 dice in play: 115.69
+	Average points accumualted with 5 dice in play: 181.92
+	Average points accumualted with 6 dice in play: 287.29
+	Probability of throwing a dud with 1 dice in play: 0.65
+	Probability of throwing a dud with 2 dice in play: 0.38
 	Probability of throwing a dud with 3 dice in play: 0.23
 	Probability of throwing a dud with 4 dice in play: 0.16
 	Probability of throwing a dud with 5 dice in play: 0.08
