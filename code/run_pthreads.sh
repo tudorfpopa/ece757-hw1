@@ -11,7 +11,7 @@ for THREADS in 2 3 4 5 6 7 8 9 10 11 12; do
     touch $OUTPUT
     TOTAL=0
     for i in $(seq 1 $RUNS); do
-        RESULT=$(./kymppitonni 5000 10 300 $THREADS | grep "Execution time in cycles")
+        RESULT=$(./kymppitonni 100000 10 300 $THREADS | grep "Execution time in cycles")
         CYCLES=$(echo $RESULT | grep -oP '\d+')
         TOTAL=$((TOTAL + CYCLES))
     done
